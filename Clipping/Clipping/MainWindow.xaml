@@ -1,0 +1,28 @@
+﻿<Window x:Class="Clipping.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clipping"
+        mc:Ignorable="d"
+        Title="Clipping" Height="465" Width="815">
+    <Grid>
+        <Canvas x:Name="g" HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="600" Cursor="Hand" MouseDown="g_MouseDown" MouseMove="g_MouseMove" MouseRightButtonDown="g_MouseRightButtonDown" MouseRightButtonUp="g_MouseRightButtonUp" MouseLeftButtonDown="g_MouseLeftButtonDown">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#ebeff5" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+
+        <RadioButton Name="CohenSutherland" Content="Cohen-Sutherland" IsChecked="True" HorizontalAlignment="Left" Margin="620,30,0,0" VerticalAlignment="Top" Height="23" Width="153" FontSize="16" Checked="CohenSutherland_Checked"/>
+        <RadioButton Name="CyrusBeck" Content="Cyrus-Beck" IsChecked="False" HorizontalAlignment="Left" Margin="620,66,0,0" VerticalAlignment="Top" Width="153" FontSize="16" Checked="CyrusBeck_Checked"/>
+
+        <Button x:Name="Generator" Content="Vygeneruj 10 úsečiek" HorizontalAlignment="Left" Margin="610,108,0,0" VerticalAlignment="Top" 
+                    Width="180" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Click="Generator_Click"/>
+
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="610,390,0,0" VerticalAlignment="Top" 
+                    Width="180" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Click="Reset_Click"/>
+    </Grid>
+</Window>
