@@ -1,0 +1,34 @@
+﻿<Window x:Class="Z_buffer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Z_buffer"
+        mc:Ignorable="d"
+        Title="Z-buffer" Height="470" Width="820">
+    <Grid>
+        <Canvas x:Name="g" HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="600" Cursor="Hand" MouseLeftButtonDown="g_MouseLeftButtonDown" MouseRightButtonDown="g_MouseRightButtonDown">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#ebeff5" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <Button x:Name="Zbuffer" Content="Z-buffer" HorizontalAlignment="Left" Margin="610,10,0,0" VerticalAlignment="Top" 
+                    Width="180" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Click="Zbuffer_Click"/>
+
+        <Label Content="Počet úsečiek: " Height="30" HorizontalAlignment="Left" Width="110" Margin="610,45,79,359" FontSize="16"/>
+        <Label Name="numberOfLines" Content="0" HorizontalAlignment="Left" Margin="726,45,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="610,390,0,0" VerticalAlignment="Top" 
+                    Width="180" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Click="Reset_Click"/>
+
+        <Label Content="Rozlíšenie priemetne: " HorizontalAlignment="Left" Margin="610,180,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+        <Button x:Name="DecreaseIter" Content="-" HorizontalAlignment="Left" Margin="620,220,0,0" VerticalAlignment="Top" Width="30" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Cursor="Hand" Click="DecreaseIter_Click"/>
+        <Button x:Name="IncreaseIter" Content="+" HorizontalAlignment="Left" Margin="752,220,0,0" VerticalAlignment="Top" Width="30" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Cursor="Hand" Click="IncreaseIter_Click"/>
+        <TextBox x:Name="ParameterPX" HorizontalAlignment="Left" Height="30" Margin="651,220,0,0" Text="4" VerticalAlignment="Top" Width="100" BorderBrush="DarkBlue" FontSize="16" TextAlignment="Center" SelectionBrush="DarkBlue"/>
+
+    </Grid>
+</Window>

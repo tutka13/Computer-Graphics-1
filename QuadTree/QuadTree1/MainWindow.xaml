@@ -1,0 +1,39 @@
+﻿<Window x:Class="QuadTree1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuadTree1"
+        mc:Ignorable="d"
+        Title="QuadTree" Height="680" Width="940">
+    <Grid>
+        <Canvas x:Name="g" HorizontalAlignment="Left" Height="660" VerticalAlignment="Top" Width="660" Cursor="Hand" MouseLeftButtonDown="g_MouseLeftButtonDown" MouseRightButtonDown="g_MouseRightButtonDown" MouseMove="g_MouseMove" MouseRightButtonUp="g_MouseRightButtonUp">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#ebeff5" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <Rectangle HorizontalAlignment="Left" VerticalAlignment="Top" Height="660" Stroke="#ebeff5" Width="660"/>
+        <Button x:Name="RandomPoints" Content="Generuj náhodné body" HorizontalAlignment="Left" Margin="670,30,0,0" VerticalAlignment="Top" 
+                    Width="250" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Click="RandomPoints_Click"/>
+        <TextBlock x:Name="nazov" HorizontalAlignment="Left" Margin="674,394,0,0" TextWrapping="NoWrap" Foreground ="DarkBlue" Text="Cesta k vybranému bodu" VerticalAlignment="Top" Height="25" Width="250" FontSize="16"/>
+        <TextBlock x:Name="PathText" HorizontalAlignment="Left" Margin="670,430,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="120" Width="250" FontSize="16">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#ebeff5" Offset="0"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="670,600,0,0" VerticalAlignment="Top" 
+                    Width="250" Height="30" Background="White" BorderBrush="DarkBlue" FontSize="16" Click="Reset_Click"/>
+        <Line X1="720" Y1="250" X2="880" Y2="250" StrokeThickness="2" Stroke="DarkBlue"/>
+        <Line X1="800" Y1="175" X2="800" Y2="325" StrokeThickness="2" Stroke="DarkBlue"/>
+        <TextBlock Text="I." Margin="830,192,-0.4,8.4" FontSize="30" Foreground ="DarkBlue"/>
+        <TextBlock Text="II." Margin="830,267,-0.4,8.4" FontSize="30" Foreground ="DarkBlue"/>
+        <TextBlock Text="III." Margin="740,267,-0.4,8.4" FontSize="30" Foreground ="DarkBlue"/>
+        <TextBlock Text="IV." Margin="740,192,-0.4,8.4" FontSize="30" Foreground ="DarkBlue" RenderTransformOrigin="0.471,0.495"/>
+    </Grid>
+</Window>
